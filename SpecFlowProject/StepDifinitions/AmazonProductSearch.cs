@@ -28,8 +28,7 @@ namespace SpecFlowProject
         [When("Check the Title page and put all the links in list")]
         public void checkTitlePageAndStoreLinksInList()
         {
-            //IWebDriver driver;
-            //system.threading.thread.sleep(20000);
+            
             //Assert.Equals("Amazon", this.driver.FindElement(By.XPath("//span[text()='Amazon']")).Text);
             // Search the product in EditBox
             this.driver.FindElement(By.XPath("//*[@id='twotabsearchtextbox']")).SendKeys("Iphone");
@@ -47,19 +46,12 @@ namespace SpecFlowProject
                     System.Threading.Thread.Sleep(1000);
 
                 }
-
-
-
             }
-
-
         }
 
         [Then("click on product and Retrieve the Price of Product")]
         public void ThenTheResultShouldBe()
         {
-            
-
             Console.WriteLine("Passed");
         }
     }
