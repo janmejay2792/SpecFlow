@@ -84,6 +84,8 @@ this.ScenarioInitialize(scenarioInfo);
  testRunner.Given("Launch The Application and Navigate to URL", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 10
  testRunner.When("Check the Title page and put all the links in list", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 11
+ testRunner.Then("click on product and Retrieve the Price of Product", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }

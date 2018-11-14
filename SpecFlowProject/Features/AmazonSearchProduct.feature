@@ -8,4 +8,4 @@ Scenario: Search The Product on Amazon Applicatio0n
 	Given Launch The Application and Navigate to URL
 	#And Check the Title page and put all the links in list
 	When Check the Title page and put all the links in list
-	#Then the result should be 120 on the screen#
+	Then click on product and Retrieve the Price of Product

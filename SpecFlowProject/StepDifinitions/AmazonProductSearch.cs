@@ -42,19 +42,23 @@ namespace SpecFlowProject
             {
                 if (link.GetAttribute("innerText").SequenceEqual("Apple iPhone")) {
                     Console.WriteLine(link.Text.ToString());
+                    link.Click();
+                    this.driver.Navigate().Back();
+                    System.Threading.Thread.Sleep(1000);
+
                 }
 
 
-                
+
             }
 
 
         }
 
-        [Then("the result should be (.*) on the screen")]
-        public void ThenTheResultShouldBe(int result)
+        [Then("click on product and Retrieve the Price of Product")]
+        public void ThenTheResultShouldBe()
         {
-            //TODO: implement assert (verification) logic
+            
 
             Console.WriteLine("Passed");
         }
