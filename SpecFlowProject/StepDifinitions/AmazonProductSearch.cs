@@ -34,10 +34,14 @@ namespace SpecFlowProject
             // Search the product in EditBox
             pageObject = new PageElement();
             System.Threading.Thread.Sleep(4000);
-            pageObject.dictionaryObject(driver, "AmazonSearchEditBox").SendKeys("Iphone");
-            pageObject.dictionaryObject(driver, "SerachButton").Click();
+            pageObject.DictionaryObject(driver, "AmazonSearchEditBox").SendKeys("Iphone");
+            pageObject.DictionaryObject(driver, "SerachButton").Click();
 
             ICollection<IWebElement> links = driver.FindElements(By.TagName("a"));
+
+            
+
+
             foreach (IWebElement link in links)
             {
                 if (link.GetAttribute("innerText").SequenceEqual("Apple iPhone")) {

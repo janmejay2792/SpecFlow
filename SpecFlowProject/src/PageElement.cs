@@ -11,18 +11,22 @@ namespace SpecFlowProject
 {
     class PageElement
     {
-        private IWebDriver driver;
+        public IWebDriver driver;
+        public static By AmazonHomePageSearchBox = By.XPath("//*[@id='twotabsearchtextbox']");
+        public static By SerachButton = By.XPath("//*[@value='Go']");
+
+        
+
+
         //private IDictionary<string, IWebElement> dictionary = new Dictionary<string, IWebElement>();
         public static void Main(string[] args)
         {          Console.WriteLine("Dictionary Element for Object"); }
 
         // Added all the element locater in distionary object
-        public IWebElement dictionaryObject(IWebDriver driver, String var) {
+        public IWebElement DictionaryObject(IWebDriver driver, String var) {
             IDictionary<string, IWebElement> dictionary = new Dictionary<string, IWebElement>();
-            dictionary.Add("AmazonSearchEditBox", driver.FindElement(By.XPath("//*[@id='twotabsearchtextbox']")));
-            dictionary.Add("SerachButton", driver.FindElement(By.XPath("//*[@value='Go']")));
-
-
+            dictionary.Add("AmazonSearchEditBox", driver.FindElement(AmazonHomePageSearchBox));
+            dictionary.Add("SerachButton", driver.FindElement(SerachButton));
 
 
             // Search the WebElement in String Format and return WebElement value
