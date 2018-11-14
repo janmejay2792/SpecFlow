@@ -34,13 +34,18 @@ namespace SpecFlowProject
             // Search the product in EditBox
             this.driver.FindElement(By.XPath("//*[@id='twotabsearchtextbox']")).SendKeys("Iphone");
         
-            System.Threading.Thread.Sleep(3000);
+            System.Threading.Thread.Sleep(4000);
             this.driver.FindElement(By.XPath("//*[@value='Go']")).Click();
 
             ICollection<IWebElement> links = driver.FindElements(By.TagName("a"));
             foreach (IWebElement link in links)
             {
-                Console.WriteLine(link.Text.ToString());
+                if (link.GetAttribute("innerText").SequenceEqual("Apple iPhone")) {
+                    Console.WriteLine(link.Text.ToString());
+                }
+
+
+                
             }
 
 

@@ -63,8 +63,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AmazonProductSearch.cs" />
-    <Compile Include="AmazonSearchProduct.feature.cs">
+    <Compile Include="StepDifinitions\AmazonProductSearch.cs" />
+    <Compile Include="Features\AmazonSearchProduct.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>AmazonSearchProduct.feature</DependentUpon>
@@ -73,7 +73,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="AmazonSearchProduct.feature">
+    <None Include="Features\AmazonSearchProduct.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>AmazonSearchProduct.feature.cs</LastGenOutput>
     </None>
