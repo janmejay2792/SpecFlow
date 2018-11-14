@@ -1,12 +1,10 @@
-﻿using NUnit.Framework;
-using OpenQA.Selenium;
-using OpenQA.Selenium.Chrome;
-using OpenQA.Selenium.Firefox;
+﻿using OpenQA.Selenium;
+using SpecFlowProject.src;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using TechTalk.SpecFlow;
+
 
 namespace SpecFlowProject
 {
@@ -14,14 +12,16 @@ namespace SpecFlowProject
     public sealed class AmazonProductSearch
     {
         private IWebDriver driver;
-        
+        private BrowserFactory browserFactory;
+
         // For additional details on SpecFlow step definitions see http://go.specflow.org/doc-stepdef
 
         [Given("Launch The Application and Navigate to URL")]
         public void LaunchTheApplicationAndNavigateURL()
         {
-            this.driver = new ChromeDriver();
-            driver.Navigate().GoToUrl("https://www.amazon.com");
+            browserFactory = new BrowserFactory();
+            this.driver = browserFactory.SelectBrowseForExecution();
+            browserFactory.LoadApplication(driver,"https://www.amazon.in");
             driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(8);
         }
 
@@ -53,6 +53,8 @@ namespace SpecFlowProject
         public void ThenTheResultShouldBe()
         {
             Console.WriteLine("Passed");
+            browserFactory = new BrowserFactory();
+            browserFactory.CloseAllDrivers(driver);
         }
     }
 }
