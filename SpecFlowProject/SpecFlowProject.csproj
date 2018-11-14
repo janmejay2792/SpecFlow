@@ -70,7 +70,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>AmazonSearchProduct.feature</DependentUpon>
     </Compile>
-    <Compile Include="Program.cs" />
+    <Compile Include="src\PageElement.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -13,6 +13,7 @@ namespace SpecFlowProject
     {
         private IWebDriver driver;
         private BrowserFactory browserFactory;
+        private PageElement pageObject;
 
         // For additional details on SpecFlow step definitions see http://go.specflow.org/doc-stepdef
 
@@ -31,10 +32,10 @@ namespace SpecFlowProject
             
             //Assert.Equals("Amazon", this.driver.FindElement(By.XPath("//span[text()='Amazon']")).Text);
             // Search the product in EditBox
-            this.driver.FindElement(By.XPath("//*[@id='twotabsearchtextbox']")).SendKeys("Iphone");
-        
+            pageObject = new PageElement();
             System.Threading.Thread.Sleep(4000);
-            this.driver.FindElement(By.XPath("//*[@value='Go']")).Click();
+            pageObject.dictionaryObject(driver, "AmazonSearchEditBox").SendKeys("Iphone");
+            pageObject.dictionaryObject(driver, "SerachButton").Click();
 
             ICollection<IWebElement> links = driver.FindElements(By.TagName("a"));
             foreach (IWebElement link in links)
