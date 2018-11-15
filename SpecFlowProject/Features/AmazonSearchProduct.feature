@@ -20,3 +20,4 @@ Scenario Outline: Search Multiple Products on Amazon Application
 	| IPhone  |
 	| Samsung |
 	| MotoRola|
+
