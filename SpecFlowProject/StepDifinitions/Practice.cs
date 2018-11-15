@@ -18,6 +18,8 @@ namespace SpecFlowProject.StepDifinitions
             var test = dictionary["UserName"];
             Console.WriteLine(test);
             Console.WriteLine(dictionary["Password"]);
+
+  
         }
 
         internal class TableExtension {
