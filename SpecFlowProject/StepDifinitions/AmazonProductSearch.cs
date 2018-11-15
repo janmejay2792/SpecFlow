@@ -22,14 +22,14 @@ namespace SpecFlowProject
         {
             browserFactory = new BrowserFactory();
             this.driver = browserFactory.SelectBrowseForExecution();
-            browserFactory.LoadApplication(driver,"https://www.amazon.in");
+            browserFactory.LoadApplication(driver, "https://www.amazon.in");
             driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(8);
         }
 
         [When("Check the Title page and put all the links in list")]
         public void checkTitlePageAndStoreLinksInList()
         {
-            
+
             //Assert.Equals("Amazon", this.driver.FindElement(By.XPath("//span[text()='Amazon']")).Text);
             // Search the product in EditBox
             pageObject = new PageElement();
@@ -45,7 +45,7 @@ namespace SpecFlowProject
             {
                 if (link.GetAttribute("innerText").SequenceEqual("Apple iPhone"))
                 {
-                    
+
                     Console.WriteLine(link.Text.ToString());
                     Console.ReadLine();
                     link.Click();
@@ -72,7 +72,10 @@ namespace SpecFlowProject
         {
             pageObject = new PageElement();
             System.Threading.Thread.Sleep(4000);
-            pageObject.DictionaryObject(driver, "AmazonSearchEditBox").SendKeys(Product);
+            // Adding Scenario Context Flow
+            ScenarioContext.Current.Add("ProductName", Product);
+            var ProductName = ScenarioContext.Current.Get<String>("ProductName");
+            pageObject.DictionaryObject(driver, "AmazonSearchEditBox").SendKeys(ProductName);
             pageObject.DictionaryObject(driver, "SerachButton").Click();
         }
 
@@ -88,6 +91,12 @@ namespace SpecFlowProject
 
 
     }
+
+   
+
+
+
+    
 
 
 
