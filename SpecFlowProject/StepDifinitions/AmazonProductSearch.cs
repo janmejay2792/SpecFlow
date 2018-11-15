@@ -39,13 +39,15 @@ namespace SpecFlowProject
 
             ICollection<IWebElement> links = driver.FindElements(By.TagName("a"));
 
-            
 
 
             foreach (IWebElement link in links)
             {
-                if (link.GetAttribute("innerText").SequenceEqual("Apple iPhone")) {
+                if (link.GetAttribute("innerText").SequenceEqual("Apple iPhone"))
+                {
+                    
                     Console.WriteLine(link.Text.ToString());
+                    Console.ReadLine();
                     link.Click();
                     this.driver.Navigate().Back();
                     System.Threading.Thread.Sleep(1000);
@@ -61,5 +63,32 @@ namespace SpecFlowProject
             browserFactory = new BrowserFactory();
             browserFactory.CloseAllDrivers(driver);
         }
+
+
+
+        // Scenario 2
+        [When(@"Check the Products (.*) and check the details with respect")]
+        public void WhenCheckTheProductsAndCheckTheDetailsWithRespectIPhone(String Product)
+        {
+            pageObject = new PageElement();
+            System.Threading.Thread.Sleep(4000);
+            pageObject.DictionaryObject(driver, "AmazonSearchEditBox").SendKeys(Product);
+            pageObject.DictionaryObject(driver, "SerachButton").Click();
+        }
+
+
+        [Then(@"Tear Down the Application")]
+        public void ThenTearDownTheApplication()
+        {
+            Console.WriteLine("Passed");
+            browserFactory = new BrowserFactory();
+            browserFactory.CloseAllDrivers(driver);
+        }
+
+
+
     }
+
+
+
 }

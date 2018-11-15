@@ -89,6 +89,27 @@ this.ScenarioInitialize(scenarioInfo);
 #line hidden
             this.ScenarioCleanup();
         }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("Search Multiple Products on Amazon Application")]
+        [NUnit.Framework.TestCaseAttribute("IPhone", null)]
+        [NUnit.Framework.TestCaseAttribute("Samsung", null)]
+        [NUnit.Framework.TestCaseAttribute("MotoRola", null)]
+        public virtual void SearchMultipleProductsOnAmazonApplication(string product, string[] exampleTags)
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Search Multiple Products on Amazon Application", null, exampleTags);
+#line 13
+this.ScenarioInitialize(scenarioInfo);
+            this.ScenarioStart();
+#line 14
+ testRunner.Given("Launch The Application and Navigate to URL", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 15
+ testRunner.When(string.Format("Check the Products {0} and check the details with respect", product), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 16
+ testRunner.Then("Tear Down the Application", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
     }
 }
 #pragma warning restore

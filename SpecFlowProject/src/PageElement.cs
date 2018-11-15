@@ -14,6 +14,7 @@ namespace SpecFlowProject
         public IWebDriver driver;
         public static By AmazonHomePageSearchBox = By.XPath("//*[@id='twotabsearchtextbox']");
         public static By SerachButton = By.XPath("//*[@value='Go']");
+        
 
 
 
