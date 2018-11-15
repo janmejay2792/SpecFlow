@@ -98,14 +98,14 @@ this.ScenarioInitialize(scenarioInfo);
         public virtual void SearchMultipleProductsOnAmazonApplication(string product, string[] exampleTags)
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Search Multiple Products on Amazon Application", null, exampleTags);
-#line 13
+#line 14
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
-#line 14
- testRunner.Given("Launch The Application and Navigate to URL", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 15
- testRunner.When(string.Format("Check the Products {0} and check the details with respect", product), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.Given("Launch The Application and Navigate to URL", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 16
+ testRunner.When(string.Format("Check the Products {0} and check the details with respect", product), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 17
  testRunner.Then("Tear Down the Application", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
