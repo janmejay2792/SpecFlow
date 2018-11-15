@@ -22,6 +22,7 @@ namespace SpecFlowProject.StepDifinitions
   
         }
 
+
         internal class TableExtension {
             public static Dictionary<String, String> ToDictionary(Table table) {
                 var dictionary = new Dictionary<String, String>();
