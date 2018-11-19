@@ -8,6 +8,17 @@ Scenario: Table table
 	| UserName | janmejay |
 	| Password | 1Arya    |   
 
+
+
+Scenario: SpecFLow Assist Dynamic 
+	When Users Entered Login Credentials
+	| Key             | value    |
+	| userName1       | janmejay |
+	| password1       | 1Arya    |
+	| COnfirmPassword | Arya12   |
+	
+	
+	
 	
 
 

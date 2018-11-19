@@ -61,3 +61,6 @@ C:\Users\welcome\Source\Repos\SpecFLow\SpecFlowProject\obj\Debug\SpecFlowProject
 C:\Users\welcome\Source\Repos\SpecFLow\SpecFlowProject\obj\Debug\SpecFlowProject.csproj.CopyComplete
 C:\Users\welcome\Source\Repos\SpecFLow\SpecFlowProject\obj\Debug\SpecFlowProject.exe
 C:\Users\welcome\Source\Repos\SpecFLow\SpecFlowProject\obj\Debug\SpecFlowProject.pdb
+C:\Sandbox\SpecFlowProject\SpecFlowProject\bin\Debug\ImpromptuInterface.dll
+C:\Sandbox\SpecFlowProject\SpecFlowProject\bin\Debug\SpecFlow.Assist.Dynamic.dll
+C:\Sandbox\SpecFlowProject\SpecFlowProject\bin\Debug\ImpromptuInterface.xml

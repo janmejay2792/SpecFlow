@@ -11,7 +11,7 @@ namespace SpecFlowProject.src
 {
     class BrowserFactory
     {
-        private IWebDriver driver;
+        
 
         public IWebDriver SelectBrowseForExecution()
         {

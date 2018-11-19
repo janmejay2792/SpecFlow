@@ -94,6 +94,33 @@ this.ScenarioInitialize(scenarioInfo);
 #line hidden
             this.ScenarioCleanup();
         }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("SpecFLow Assist Dynamic")]
+        public virtual void SpecFLowAssistDynamic()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("SpecFLow Assist Dynamic", null, ((string[])(null)));
+#line 13
+this.ScenarioInitialize(scenarioInfo);
+            this.ScenarioStart();
+#line hidden
+            TechTalk.SpecFlow.Table table2 = new TechTalk.SpecFlow.Table(new string[] {
+                        "Key",
+                        "value"});
+            table2.AddRow(new string[] {
+                        "userName1",
+                        "janmejay"});
+            table2.AddRow(new string[] {
+                        "password1",
+                        "1Arya"});
+            table2.AddRow(new string[] {
+                        "COnfirmPassword",
+                        "Arya12"});
+#line 14
+ testRunner.When("Users Entered Login Credentials", ((string)(null)), table2, "When ");
+#line hidden
+            this.ScenarioCleanup();
+        }
     }
 }
 #pragma warning restore
