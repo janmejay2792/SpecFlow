@@ -32,7 +32,7 @@ namespace SpecFlowProject
             // Search the WebElement in String Format and return WebElement value
             
             IWebElement value = dictionary[var];
-            Console.WriteLine(dictionary[var].Text);
+            Console.WriteLine(dictionary[var]);
             return value;
         }
 
