@@ -10,7 +10,7 @@
 // ------------------------------------------------------------------------------
 #region Designer generated code
 #pragma warning disable
-namespace SpecFlowProject.Features
+namespace SpecFlowProject.Src.Features
 {
     using TechTalk.SpecFlow;
     
@@ -72,20 +72,39 @@ namespace SpecFlowProject.Features
         
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Search The Product on Amazon Applicatio0n")]
-        [NUnit.Framework.CategoryAttribute("mytag")]
         public virtual void SearchTheProductOnAmazonApplicatio0N()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Search The Product on Amazon Applicatio0n", null, new string[] {
-                        "mytag"});
-#line 6
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Search The Product on Amazon Applicatio0n", null, ((string[])(null)));
+#line 5
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
-#line 7
+#line 6
  testRunner.Given("Launch The Application and Navigate to URL", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 9
- testRunner.When("Check the Title page and put all the links in list", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 10
- testRunner.Then("click on product and Retrieve the Price of Product", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 7
+ testRunner.When("When i search the iphone", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 8
+ testRunner.Then("Iphone product is displayed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("Search Multiple Products on Amazon Application")]
+        [NUnit.Framework.TestCaseAttribute("IPhone", null)]
+        [NUnit.Framework.TestCaseAttribute("Samsung", null)]
+        [NUnit.Framework.TestCaseAttribute("MotoRola", null)]
+        public virtual void SearchMultipleProductsOnAmazonApplication(string product, string[] exampleTags)
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Search Multiple Products on Amazon Application", null, exampleTags);
+#line 13
+this.ScenarioInitialize(scenarioInfo);
+            this.ScenarioStart();
+#line 14
+ testRunner.Given("Launch The Application and Navigate to URL", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 15
+ testRunner.When(string.Format("Check the Products {0} and check the details with respect", product), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 16
+ testRunner.Then("Tear Down the Application", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
