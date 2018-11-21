@@ -66,3 +66,4 @@ C:\Users\welcome\source\repos\SpecFLow\SpecFlowProject\obj\Debug\SpecFlowProject
 C:\Users\welcome\source\repos\SpecFLow\SpecFlowProject\obj\Debug\SpecFlowProject.csproj.CopyComplete
 C:\Users\welcome\source\repos\SpecFLow\SpecFlowProject\obj\Debug\SpecFlowProject.exe
 C:\Users\welcome\source\repos\SpecFLow\SpecFlowProject\obj\Debug\SpecFlowProject.pdb
+C:\Users\welcome\source\repos\SpecFLow\SpecFlowProject\obj\Debug\SpecFlowProject.csprojAssemblyReference.cache

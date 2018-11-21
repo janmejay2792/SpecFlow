@@ -11,24 +11,23 @@ namespace SpecFlowProject.src.pages.home_page
     [Binding]
     class AmazonProductSearchSteps
     {
-        private IWebDriver driver;
+        private  IWebDriver driver;
         private BrowserFactory browserFactory;
-        private AmazonSearch amazon;
+        public static AmazonSearch amazon;
+        private AmazonProductSearchValidation amazonProductSearchValidation;
 
         public AmazonProductSearchSteps()
         {
-            amazon = new AmazonSearch(driver);
+            amazon = new AmazonSearch();
+            amazonProductSearchValidation = new AmazonProductSearchValidation();
         }
-
-        // For additional details on SpecFlow step definitions see http://go.specflow.org/doc-stepdef
-
 
 
         [Given("Launch The Application and Navigate to URL")]
         public void LaunchTheApplicationAndNavigateURL()
         {
             browserFactory = new BrowserFactory();
-            this.driver = browserFactory.SelectBrowseForExecution();
+            driver = browserFactory.SelectBrowseForExecution();
             browserFactory.LoadApplication(driver, "https://www.amazon.in");
             driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(8);
         }
@@ -36,7 +35,7 @@ namespace SpecFlowProject.src.pages.home_page
         [When("When i search the (.*)")]
         public void SearchIphone(string product)
         {
-            amazon.SearchIphone(product);
+           amazon.SearchIphone(driver,product);
         }
 
 
@@ -44,6 +43,7 @@ namespace SpecFlowProject.src.pages.home_page
         [Then(@"Iphone product is displayed")]
         public void ThenIphoneProductIsDisplayed()
         {
+            amazonProductSearchValidation.IsIPhoneSearched(driver);
         }
 
 
@@ -61,7 +61,7 @@ namespace SpecFlowProject.src.pages.home_page
         [When(@"Check the Products (.*) and check the details with respect")]
         public void WhenCheckTheProductsAndCheckTheDetailsWithRespectIPhone(String Product)
         {
-            amazon.SearchIphone("ksjhks");
+            amazon.SearchIphone(driver,"ksjhks");
         }
 
 
